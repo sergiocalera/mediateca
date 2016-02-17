@@ -13,13 +13,13 @@ class View{
     public function renderizarPeticion($vista, $respuesta=false){
         $rutaView = ROOT . 'vistas'.DS.$this->_controlador.DS.$vista.'.php';
         $js = array(
-            'bootstrap' => BASE_URL.'/medioteca/vistas/index/js/bootstrap.min.js',
-            'jquery' => BASE_URL.'/medioteca/vistas/index/js/jquery-1.12.0.min.js',
-            'video' => BASE_URL.'/medioteca/vistas/index/js/video.js'
+            'bootstrap' => BASE_URL.'/mediateca/vistas/index/js/bootstrap.min.js',
+            'jquery' => BASE_URL.'/mediateca/vistas/index/js/jquery-1.12.0.min.js',
+            'video' => BASE_URL.'/mediateca/vistas/index/js/video.js'
         );
         $css = array(
-            'bootstrap' => BASE_URL.'medioteca/vistas/index/css/bootstrap.min.css',
-            'index' => BASE_URL.'medioteca/vistas/index/css/index.css'
+            'bootstrap' => BASE_URL.'mediateca/vistas/index/css/bootstrap.min.css',
+            'index' => BASE_URL.'mediateca/vistas/index/css/index.css'
         );
         if(is_readable($rutaView)){
             include_once ROOT.'vistas'.DS.'layout'.DS.DEFAULT_LAYOUT.DS.'header.php';

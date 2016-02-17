@@ -7,7 +7,7 @@ class indexController extends Controlador{
     }
     
     public function index() {
-        $this->_view->renderizarPeticion('index', file_get_contents( BASE_URL.'medioteca/api/index/?tipo=listas_reproduccion') );
+        $this->_view->renderizarPeticion('index', file_get_contents( BASE_URL.'mediateca/api/index/?tipo=listas_reproduccion') );
     }
     
     public function contenido(){

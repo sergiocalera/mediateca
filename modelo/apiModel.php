@@ -3,44 +3,14 @@ include_once ROOT. 'modelo' . DS . 'src' . DS . 'Cliente.php';
 include_once ROOT . 'modelo' . DS . 'src' . DS . 'PlayList.php';
 include_once ROOT . 'modelo' . DS . 'src' . DS . 'VideoList.php';
 
-
-
-
-
-//$playList = new PlayList($scopePlayList, $key);
-//var_dump( $playList->getListId() );
-//var_dump( $playList->getIdForName('Entornos Creativos') );
-
-
-//$videoList = new VideoList($scopeVideoList, $key);
-//var_dump($videoList->getListId());
-//$name = "PL49QfD7Cjc0gNVtV6wcg7rnvikssYep0UzMDiiO-O0mw";
-//var_dump( $videoList->getIdForName($name));
-
 class apiModel{
     /***************[SCOPE PARA PLAYLIST]**************/
     private $channelId = 'UCQPGruPlVLSM2lVsMcOPMvQ';
 
-//    private $scopePlayList = array(
-//        "part" => "snippet",
-//        "channelId" => '$channelId',
-//        "maxResults" => "5",
-//        'pageToken' => ""
-//    );
-
-    /*****************[SCOPE PARA VIDEOLIST]*****************/
-    private $playListId = 'PLOAi62E9rjCSRzWBkfEqVMByd3sPtlvQI';
-
-//    private $scopeVideoList = array(
-//        'part' => 'snippet',
-//        'maxResults' => "5",
-//        'playlistId' => '$playListId',
-//        'pageToken' => ""
-//    );
     /******************[PARAMETROS DEL SCOPE]******************/
     private $scope = array(
         'part' => 'snippet',
-        'maxResults' => '5',
+        'maxResults' => '50',
         'pageToken' => ''
     );
     
