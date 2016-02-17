@@ -1,0 +1,23 @@
+#contenidoRelacionado{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+#contenidoRelacionado [class*="col-md-4"],
+#contenidoRelacionado[class*="col-sm-4"]{
+    display: inline-block;
+    float: none;
+}
+
+.caption{
+    text-align: center;
+    display: block;
+    /*overflow-y: scroll;*/
+    overflow-y: auto;
+    white-space: normal;
+}
+
+#descripcion{
+    overflow-y: auto;
+    white-space: normal;
+}
