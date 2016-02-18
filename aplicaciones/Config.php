@@ -1,6 +1,6 @@
 <?php
 
-define('BASE_URL', 'http://192.168.1.88/');
+define('BASE_URL', 'https://quiet-falls-55453.herokuapp.com//');
 define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'default');
 
