@@ -1,3 +1,6 @@
 notas.txt
 vendor/
 .env
+.gitignore
+composer.json
+composer.lock

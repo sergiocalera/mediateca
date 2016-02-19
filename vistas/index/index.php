@@ -60,5 +60,9 @@ $respuestaJson = json_decode($respuesta);
         </div>
     </div>
 </div>
-<script src="<?php echo $js['video']?>" type="text/javascript"></script>
-<link rel='stylesheet' type="text/css" href="<?php echo $css['index'];?>"/>
+<script src='<?php echo $js['jquery-1.12.0.min.js'];?>'> type='text/javascript'></script>
+<script src="<?php echo $js['bootstrap.min.js']?>" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $css['bootstrap.min.css'];?>" />
+
+<script src="<?php echo $js['video.js']?>" type="text/javascript"></script>
+<link rel='stylesheet' type="text/css" href="<?php echo $css['index.css'];?>"/>

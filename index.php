@@ -14,6 +14,7 @@ require_once APP_PATH.'Request.php';
 require_once APP_PATH.'View.php';
 //require_once APP_PATH.'Database.php';
 //require_once APP_PATH.'Session.php';
+require_once APP_PATH.'OtherFiles.php';
 
 //Session::init();
 
@@ -23,3 +24,5 @@ try{
 catch (Exception $e){
     echo $e->getMessage();
 }
+
+//var_dump (otherFiles::run(ROOT.VISTAS, new Request()));
