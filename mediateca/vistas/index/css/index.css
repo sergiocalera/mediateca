@@ -1,0 +1,61 @@
+#contenidoRelacionado{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+#contenidoRelacionado [class*="col-md-4"]{
+    display: inline-block;
+    float: none;
+}
+
+.modal-content{
+    background-image: url(http://www.televisioneducativa.gob.mx/themes/simple/images/fondo.png);
+    background-size: cover;
+}
+
+.caption .title{
+    height: 50px;
+    overflow-y: auto;
+}
+
+.caption .titleMain{
+    height: 30px;
+    overflow-y: auto;
+}
+
+.caption{
+    text-align: center;
+    display: block;
+    /*overflow-y: scroll;*/
+    overflow-y: auto;
+    white-space: normal;
+}
+
+#descripcion{
+    overflow-y: auto;
+    white-space: normal;
+}
+
+#principal{
+    height: 450px;
+    width: 1200px;
+}
+
+#contenedor{
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+#contenedor [class*="col-md-4"]{
+    display: inline-block;
+    float: none;
+}
+
+#caratula{
+    text-align: center;
+    margin-right: 0px;
+}
+
+#tituloGaleria{
+    text-align: center;;
+}
