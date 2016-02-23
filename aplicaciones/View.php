@@ -13,6 +13,8 @@ class View{
         $rutaView = ROOT . 'vistas'.DS.$this->_controlador.DS.$vista.'.php';
         $js = $archivos['js'];
         $css = $archivos['css'];
+        $img = $archivos['img'];
+        
         if(is_readable($rutaView)){
             include_once ROOT.'vistas'.DS.'layout'.DS.DEFAULT_LAYOUT.DS.'header.php';
             include_once $rutaView;

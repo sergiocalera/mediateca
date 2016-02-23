@@ -64,6 +64,8 @@ $(function(){
             });
             $('#descripcion').html( $(this).attr('descripcion'));
         });
+        
+        $('span .material-icons').val('keyboard_arrow_right');
     
     });
     
@@ -88,5 +90,22 @@ $(function(){
     
     $('.playList').click(function(){
         id = this.id;
+    });
+    
+    $('.playList').mouseenter(function(){
+        $(this).popover('show');
+    });
+    
+    $('.playList').mouseleave(function(){
+        $(this).popover('hide');
+    });
+    
+    $('.iconos').click(function(){
+        if($('.material-icons').html() === '[ + ]'){
+            $('.material-icons').html('[ - ]');
+        }
+        else{
+            $('.material-icons').html('[ + ]');
+        }
     });
 });

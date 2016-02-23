@@ -2,16 +2,29 @@
 $respuestaJson = json_decode($respuesta);
 ?>
 <!-- Button trigger modal -->
+<style type="text/css">
+    
+    
+</style>
 
-<div class="container-fluid">
-    <div class="row">
+<div id="principal">
+    <div id="tituloGaleria"><h3>MEDIATECA</h3></div>
+    <div id="contenedor" class="row">
         <?php foreach ($respuestaJson as $thum):?>
-        <div class="col-sm-6 col-md-3">
+        <div class="col-md-4" style="width: 360px">
             <a href='' class='thumbnail playList' data-toggle='modal' data-target='#videoModal' 
-               data-whatever='<?php echo $thum->title;?>' id="<?php echo $thum->id;?>">
-                <img src='<?php echo $thum->thumbnails;?>' alt='<?php echo $thum->title;?>' class="img-thumbnail">
-                <div class="caption">
-                    <h4><?php echo $thum->title;?></h4>
+               data-whatever='<?php echo $thum->title;?>'
+               id="<?php echo $thum->id;?>"
+               data-container="body" data-toggle="popover" data-placement="bottom" 
+               data-content="<?php echo $thum->description;?>">
+                <div id="caratula"
+                     style="background: url(<?php echo $img['f02.png'];?>) left bottom no-repeat, 
+                                        url(<?php echo $thum->thumbnails;?>) left bottom no-repeat;
+                                        height : <?php echo $thum->height;?>px;
+                                        width : <?php echo $thum->width;?>px" >
+                </div>
+                <div class="caption" style="width: <?php echo $thum->width;?>px">
+                    <h4 class="titleMain"><?php echo $thum->title;?></h4>
                 </div>
             </a>
         </div>
@@ -41,12 +54,21 @@ $respuestaJson = json_decode($respuesta);
                     </div>
                     <!-- div para descripcion-->
                     <br>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Descripci&oacute;n</h4>
-                        </div>
-                        <div id="descripcion" class="panel-body">
-                            ...
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a class="iconos" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="material-icons">[ + ]</span>
+                                        Descripci&oacute;n
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div id="descripcion" class="panel-body">
+                                    ...
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!-- div de contenido relacionado -->

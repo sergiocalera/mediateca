@@ -16,7 +16,6 @@ class apiController extends Controlador{
                 $this->_view->renderizarConsulta('index', $modelo->getJson() );
                 break;
             case 'lista_videos':
-                
                 $modelo->addPropetyScope('playlistId', $this->getGetParam('idLista'));
                 $modelo->setKey( KEY );
                 $modelo->setParam( $this->getGetParam('tipo'));

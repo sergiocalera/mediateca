@@ -2,7 +2,6 @@
 include_once ROOT. 'modelo' . DS . 'src' . DS . 'Cliente.php';
 include_once ROOT . 'modelo' . DS . 'src' . DS . 'PlayList.php';
 include_once ROOT . 'modelo' . DS . 'src' . DS . 'VideoList.php';
-
 class apiModel{
     /***************[SCOPE PARA PLAYLIST]**************/
     private $channelId = 'UCQPGruPlVLSM2lVsMcOPMvQ';
