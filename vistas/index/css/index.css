@@ -3,7 +3,10 @@
     white-space: nowrap;
 }
 
-#contenidoRelacionado [class*="col-md-4"]{
+#contenidoRelacionado [class*="col-md-4"],
+#contenidoRelacionado [class*="col-sm-4"],
+#contenidoRelacionado [class*="col-xs-4"]
+{
     display: inline-block;
     float: none;
 }
