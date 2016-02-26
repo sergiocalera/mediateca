@@ -1,7 +1,9 @@
 <?php
 
-//define('BASE_URL', 'https://quiet-falls-55453.herokuapp.com/');
-define('BASE_URL', 'http://localhost/');
+//define('ORIGIN_URL', 'http://localhost/');
+//define('BASE_URL', ORIGIN_URL.'mediateca/index.php/');
+define('URL', 'http://172.16.200.211/~scalera/');
+define('BASE_URL', URL.'mediateca/index.php/');
 define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'default');
 

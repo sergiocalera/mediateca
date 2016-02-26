@@ -8,8 +8,11 @@ class Request{
     private $_argumentos;
     
     public function __construct() {
-        if(isset($_GET['url'])){
-            $url = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL);
+        //if(isset($_GET['url'])){
+        if(isset($_SERVER['PATH_INFO']) ){
+            //echo 'funcion<br>';
+            //$url = filter_input(INPUT_GET, 'url', FILTER_SANITIZE_URL);
+            $url = filter_input(INPUT_SERVER, 'PATH_INFO', FILTER_SANITIZE_URL);
             $url = explode('/', $url);
             $url = array_filter($url);
             
@@ -30,6 +33,14 @@ class Request{
         if(!isset($this->_argumentos)){
             $this->_argumentos = array();
         }
+
+/*
+        echo 'URL: '.$_SERVER['PATH_INFO'].'<br>';
+        echo 'Controlador: '.$this->_controlador.'<br>';
+        echo 'Metodo: '.$this->_metodos.'<br>';
+        echo 'Argumentos: ';
+        var_dump($this->_argumentos); echo'<br>';
+        */
     }
     
     public function getControlador(){

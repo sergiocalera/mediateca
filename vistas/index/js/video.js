@@ -10,7 +10,7 @@ $(function(){
         var titulo = button.data('whatever');
         var info;
         
-        solicitar(local + 'api/index/?tipo=lista_videos&idLista=' + id, 'json', function(data){
+        solicitar(local + '/api/index/?tipo=lista_videos&idLista=' + id, 'json', function(data){
             if(data.length !== 0){
                 info = data;
                 cantidad = data.length;
@@ -31,7 +31,7 @@ $(function(){
         });
         
         if(cantidad){
-            solicitar(local + 'index/contenido/?items=' + cantidad, 'html', function(data){
+            solicitar(local + '/index/contenido/?items=' + cantidad, 'html', function(data){
                 $('#listaRelacional').html(data);
             });
             
