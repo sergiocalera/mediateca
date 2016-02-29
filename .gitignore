@@ -2,8 +2,6 @@ notas.txt
 nbproject
 vendor/
 .env
-.git
-.gitignore
 composer.json
 composer.lock
 mediateca/

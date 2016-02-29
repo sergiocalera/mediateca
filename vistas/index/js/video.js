@@ -1,16 +1,26 @@
 $(function(){
-    
-    var local = this.location.origin + this.location.pathname;
+
+    //var local = this.location.origin + this.location.pathname;
     var id = '';
     var cantidad = 0;
     var info;
+
+    var ruta = function(){
+        cadena = this.location.pathname.split('/');
+        if(cadena[cadena.length-1] === 'index.php'){
+            return this.location.origin + this.location.pathname;
+        }
+        else{
+            return this.location.origin + this.location.pathname + 'index.php';
+        }
+    }
     
     $('#videoModal').on('show.bs.modal', function(event){
         var button = $(event.relatedTarget);
         var titulo = button.data('whatever');
         var info;
         
-        solicitar(local + '/api/index/?tipo=lista_videos&idLista=' + id, 'json', function(data){
+        solicitar( ruta() +'/api/index/?tipo=lista_videos&idLista=' + id, 'json', function(data){
             if(data.length !== 0){
                 info = data;
                 cantidad = data.length;
@@ -31,7 +41,7 @@ $(function(){
         });
         
         if(cantidad){
-            solicitar(local + '/index/contenido/?items=' + cantidad, 'html', function(data){
+            solicitar( ruta() + '/index/contenido/?items=' + cantidad, 'html', function(data){
                 $('#listaRelacional').html(data);
             });
             
@@ -108,4 +118,6 @@ $(function(){
             $('.material-icons').html('[ + ]');
         }
     });
+
+    
 });
